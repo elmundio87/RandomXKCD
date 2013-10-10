@@ -1,3 +1,12 @@
+
+
+function fallback(){
+    var xkcd = document.getElementById('xkcd');
+	var out = document.createElement('img');
+    	out.src = "http://imgs.xkcd.com/comics/exploits_of_a_mom.png"
+    	xkcd.appendChild(out);
+}
+
 function xkcdfunction(o){
   var xkcd = document.getElementById('xkcd');
   if(xkcd){
@@ -8,9 +17,9 @@ function xkcdfunction(o){
     }
     else
     {
-    	var out = document.createElement('img');
-    	out.src = "http://imgs.xkcd.com/comics/exploits_of_a_mom.png"
-    	xkcd.appendChild(out);
+	fallback();
     }
   }
 }
+
+
